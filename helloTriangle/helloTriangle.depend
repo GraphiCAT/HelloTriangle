@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1459086576 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1426324528 c:\tdm-gcc-64\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1426324528 c:\tdm-gcc-64\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1459085992 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\coba.cpp
+	<windows.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -8,6 +8,7 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/helloTriangle" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/TDM-GCC-64/freeglut/bin" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -17,6 +18,7 @@
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/helloTriangle" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/TDM-GCC-64/freeglut/bin" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -30,19 +32,23 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/TDM-GCC-64/freeglut/include" />
 		</Compiler>
 		<Linker>
+			<Add library="glut32" />
 			<Add library="opengl32" />
 			<Add library="glu32" />
+			<Add library="winmm" />
 			<Add library="gdi32" />
+			<Add directory="C:/TDM-GCC-64/freeglut/lib" />
 		</Linker>
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="coba.cpp" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
+			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
