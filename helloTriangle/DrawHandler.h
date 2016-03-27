@@ -1,5 +1,6 @@
 #ifndef DrawHandler_H
 #define DrawHandler_H
+#include <string>
 
 // Setup our Opengl world, called once at startup.
 void init();
@@ -11,5 +12,7 @@ void display_2(void);
 void reshape_1 (int w, int h);
 // This is called when the window has been resized.
 void reshape_2 (int w, int h);
+
+void makePolygon(std::string filename);
 
 #endif // DrawHandler_H

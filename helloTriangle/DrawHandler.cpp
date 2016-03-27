@@ -1,6 +1,11 @@
 #include <windows.h>  // This header file will be needed for some windows compilers
 #include <GL/glut.h>  // glut (gl utility toolkit) basic windows functions, keyboard, mouse.
+#include <string>
+#include <vector>
+#include <fstream>
 #include "DrawHandler.h"
+#include "Point.h"
+#include "Coordinate.h"
 
 // Setup our Opengl world, called once at startup.
 void init()
@@ -13,7 +18,6 @@ void init()
 // Draw our world
 void display_1(void)
 {
-
    // Draw a Red 1x1 Square centered at origin
    glBegin(GL_TRIANGLES);
         glColor3f(1.0f, 0.0f, 0.0f);
@@ -29,7 +33,11 @@ void display_1(void)
           glVertex2f(1.0f,-0.25f);
           glVertex2f(0.75f,0.25f);
 
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\helloTriangle\\bin\\Debug\\polygon.txt");
+
     glEnd();
+
+
    glFlush();  // Render now
 }
 
@@ -46,6 +54,7 @@ void display_2(void)
       glVertex2f(0.25f,-0.25f);
       glColor3f(0.0f, 0.0f, 1.0f);
       glVertex2f(0.0f,0.25f);
+
    glEnd();
 
    glFlush();  // Render now
@@ -67,3 +76,38 @@ void reshape_2 (int w, int h)
    glLoadIdentity ();
 }
 
+void makePolygon(std::string filename) {
+    std::vector<Point> point_vec;
+
+    std::fstream file(filename.c_str(), std::ios_base::in);
+
+    if (!file) {
+        std::cout<<"file not found\n";
+    } else {
+        int x,y;
+        int a;
+        bool cek = 0;
+        while (file >> a) {
+            if (cek == 0) {
+                x = a;
+                cek = 1;
+            } else {
+                y = a;
+                Point temp = Point(x,y);
+                point_vec.push_back(temp);
+                //temp.printPoint();
+                cek = 0;
+            }
+        }
+    }
+
+    glBegin(GL_POLYGON);
+    glColor3f(1.0f, 0.0f, 0.0f);
+
+    for (int i = 0; i < point_vec.size(); i++) {
+        Point p;
+        p = convertToOpenGLCoordinates(point_vec.at(i).getX(),point_vec.at(i).getY(),1000,1000);
+        glVertex2f(p.getX(),p.getY());
+    }
+
+}

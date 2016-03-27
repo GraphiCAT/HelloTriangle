@@ -42,8 +42,13 @@
 			<Add library="gdi32" />
 			<Add directory="C:/TDM-GCC-64/freeglut/lib" />
 		</Linker>
-		<Unit filename="coba.cpp" />
+		<Unit filename="Coordinate.cpp" />
+		<Unit filename="Coordinate.h" />
+		<Unit filename="DrawHandler.cpp" />
+		<Unit filename="DrawHandler.h" />
+		<Unit filename="Point.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="polygon.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,10 +1,13 @@
 # depslib dependency file v1.0
-1459086576 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\main.cpp
+1459093857 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
+	"DrawHandler.h"
+	"Coordinate.h"
+	"Point.h"
 
 1426324528 c:\tdm-gcc-64\freeglut\include\gl\glut.h
 	"freeglut_std.h"
@@ -27,6 +30,7 @@
 	<stdlib.h>
 	<math.h>
 
+<<<<<<< HEAD
 1459097415 source:d:\tifani warnita\schools - college\itb\hmif itb\informatics engineering\6th semester\if3260 - computer graphics\assignments\hellotriangle\hellotriangle\coba.cpp
 	<windows.h>
 	<GL/glut.h>
@@ -37,4 +41,27 @@
 1459097421 source:d:\tifani warnita\schools - college\itb\hmif itb\informatics engineering\6th semester\if3260 - computer graphics\assignments\hellotriangle\hellotriangle\main.cpp
 
 1459094104 d:\tifani warnita\schools - college\itb\hmif itb\informatics engineering\6th semester\if3260 - computer graphics\assignments\hellotriangle\hellotriangle\drawhandler.h
+=======
+1459093830 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.cpp
+	<windows.h>
+	<GL/glut.h>
+	<string>
+	<vector>
+	<fstream>
+	"DrawHandler.h"
+	"Point.h"
+	"Coordinate.h"
+
+1459091335 c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.h
+	<string>
+
+1459093574 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\coordinate.cpp
+	"Coordinate.h"
+
+1459089517 c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\coordinate.h
+	"Point.h"
+
+1459089984 c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\point.h
+	<iostream>
+>>>>>>> f5d2543ac882dfc8999d039860a3da99ca37d42a
 
