@@ -33,7 +33,7 @@ void display_1(void)
           glVertex2f(1.0f,-0.25f);
           glVertex2f(0.75f,0.25f);
 
-    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\helloTriangle\\bin\\Debug\\polygon.txt");
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\helloTriangle\\bin\\Debug\\polygon.txt",1,0,0);
 
     glEnd();
 
@@ -76,7 +76,7 @@ void reshape_2 (int w, int h)
    glLoadIdentity ();
 }
 
-void makePolygon(std::string filename) {
+void makePolygon(std::string filename, float R, float G, float B) {
     std::vector<Point> point_vec;
 
     std::fstream file(filename.c_str(), std::ios_base::in);
@@ -102,7 +102,7 @@ void makePolygon(std::string filename) {
     }
 
     glBegin(GL_POLYGON);
-    glColor3f(1.0f, 0.0f, 0.0f);
+    glColor3f(R,G,B);
 
     for (int i = 0; i < point_vec.size(); i++) {
         Point p;
