@@ -322,27 +322,3 @@ if (shape > 8) shape = 0;
 }
 
 
-// Main program
-int main(int argc, char** argv)
-{
-   glutInit(&argc, argv);
-   glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
-   glutInitWindowSize (500, 500);
-   glutInitWindowPosition (10, 10);
-   glutTimerFunc( 10, TimeEvent, 1);
-   window_1 = glutCreateWindow (argv[0]);
-   glutSetWindowTitle("GlutWindow 1");
-   init ();
-   glutDisplayFunc(display_1);
-   glutReshapeFunc(reshape_1);
-   glutKeyboardFunc(keyboard);
-
-   window_2 = glutCreateWindow (argv[0]);
-   glutSetWindowTitle("GlutWindow 2");
-   init ();
-   glutDisplayFunc(display_2);
-   glutReshapeFunc(reshape_2);
-   glutMainLoop();
-   return 0;
-}
-
