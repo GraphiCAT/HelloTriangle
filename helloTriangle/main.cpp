@@ -23,7 +23,7 @@ int main(int argc, char** argv)
    glutReshapeFunc(reshape_1);
    display_1();
 
-   glutInitWindowSize (window_size, window_size);
+   glutInitWindowSize (506, 506);
    glutInitWindowPosition (window_size + 50, 10);
    window_2 = glutCreateWindow (argv[0]);
    glutSetWindowTitle("Gradient Triangle");

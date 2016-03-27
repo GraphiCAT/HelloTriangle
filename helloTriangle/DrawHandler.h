@@ -14,5 +14,6 @@ void reshape_1 (int w, int h);
 void reshape_2 (int w, int h);
 
 void makePolygon(std::string filename, float R, float G, float B);
+void drawGradientTriangle(std::string filename);
 
 #endif // DrawHandler_H
