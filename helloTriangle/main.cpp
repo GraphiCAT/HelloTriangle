@@ -8,22 +8,22 @@
 #include "Point.h"
 
 int window_1, window_2;
-int window_size = 500;
+int window_size = 506;
 
 // Main program
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
-   glutInitWindowSize (1000, 1000);
-   glutInitWindowPosition (10, 10);
-   window_1 = glutCreateWindow (argv[0]);
-   glutSetWindowTitle("Three Triangles");
-   init ();
-   glutDisplayFunc(display_1);
-   glutReshapeFunc(reshape_1);
-   display_1();
+    glutInitWindowSize (window_size, window_size);
+    glutInitWindowPosition (10, 10);
+    window_1 = glutCreateWindow (argv[0]);
+    glutSetWindowTitle("Three Triangles");
+    init ();
+    glutDisplayFunc(display_1);
+    glutReshapeFunc(reshape_1);
+    display_1();
 
-   glutInitWindowSize (506, 506);
+   glutInitWindowSize (window_size, window_size);
    glutInitWindowPosition (window_size + 50, 10);
    window_2 = glutCreateWindow (argv[0]);
    glutSetWindowTitle("Gradient Triangle");

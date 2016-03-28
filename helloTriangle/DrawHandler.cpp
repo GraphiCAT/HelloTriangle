@@ -33,7 +33,6 @@ void display_1(void)
           glVertex2f(1.0f,-0.25f);
           glVertex2f(0.75f,0.25f);
 
-    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\helloTriangle\\bin\\Debug\\polygon.txt",1,0,0);
 
     glEnd();
 
@@ -53,7 +52,24 @@ void display_2(void)
     drawGradientTriangle("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\triangle-7.txt");
     drawGradientTriangle("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\triangle-8.txt");
     drawGradientTriangle("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\triangle-9.txt");
-   glEnd();
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\1-face.txt",convertToFloat(250),convertToFloat(225),convertToFloat(202));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\2-right-ear.txt",convertToFloat(188),convertToFloat(123),convertToFloat(67));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\3-left-ear.txt",convertToFloat(188),convertToFloat(123),convertToFloat(67));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\4-right-eye.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\5-left-eye.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\6-right-blush.txt",convertToFloat(245),convertToFloat(189),convertToFloat(171));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\7-left-blush.txt",convertToFloat(245),convertToFloat(189),convertToFloat(171));
+    //makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\8-nose-mouth.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\9-mouth.txt",convertToFloat(174),convertToFloat(94),convertToFloat(94));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\10-whisker-1.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\11-whisker-2.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\12-whisker-3.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\13-whisker-4.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\14-whisker-5.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\15-whisker-6.txt",convertToFloat(87),convertToFloat(36),convertToFloat(11));
+    makePolygon("C:\\Users\\User\\Documents\\OpenGL\\triangle\\HelloTriangle\\assets\\kucing_2\\16-ribbon.txt",convertToFloat(250),convertToFloat(108),convertToFloat(108));
+
+
 
    glFlush();  // Render now
 }
@@ -104,10 +120,11 @@ void makePolygon(std::string filename, float R, float G, float B) {
 
     for (int i = 0; i < point_vec.size(); i++) {
         Point p;
-        p = convertToOpenGLCoordinates(point_vec.at(i).getX(),point_vec.at(i).getY(),1000,1000);
+        p = convertToOpenGLCoordinates(point_vec.at(i).getX(),point_vec.at(i).getY(),506,506);
         glVertex2f(p.getX(),p.getY());
     }
 
+    glEnd();
 }
 
 void drawGradientTriangle(std::string filename){
@@ -150,4 +167,9 @@ void drawGradientTriangle(std::string filename){
     Point p3;
     p3 = convertToOpenGLCoordinates(point_vec.at(2).getX(),point_vec.at(2).getY(),506,506);
     glVertex2f(p3.getX(),p3.getY());
+    glEnd();
+}
+
+float convertToFloat(int n) {
+    return ((float)n/(float)255);
 }
