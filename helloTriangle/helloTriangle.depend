@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1459120324 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\main.cpp
+1459132065 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<stdio.h>
@@ -43,7 +43,7 @@
 
 1459094104 d:\tifani warnita\schools - college\itb\hmif itb\informatics engineering\6th semester\if3260 - computer graphics\assignments\hellotriangle\hellotriangle\drawhandler.h
 
-1459117661 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.cpp
+1459131677 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.cpp
 	<windows.h>
 	<GL/glut.h>
 	<string>
@@ -53,7 +53,7 @@
 	"Point.h"
 	"Coordinate.h"
 
-1459120180 c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.h
+1459129129 c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\drawhandler.h
 	<string>
 
 1459094116 source:c:\users\user\documents\opengl\triangle\hellotriangle\hellotriangle\coordinate.cpp
